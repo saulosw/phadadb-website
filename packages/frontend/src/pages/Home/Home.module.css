@@ -1,0 +1,3 @@
+.mainContent {
+  padding-top: calc(var(--header-height) + 40px);
+}

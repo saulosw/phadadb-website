@@ -8,5 +8,5 @@ dotenv.config({path: path.resolve(__dirname, '..', '.env')});
 const apiPort = process.env.API_PORT;
 
 app.listen(apiPort, () => {
-    console.log(`API is running at http://localhost:${apiPort}`)
+    console.log(`Local: 🚀 API is running at http://localhost:${apiPort}`)
 });
