@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 import styles from './Header.module.css';
 import phadaLogo from '../../assets/phada-icon.png';
 
@@ -25,10 +26,11 @@ const Header = () => {
       transition={{ duration: 0.5, ease: 'easeOut' }}
     >
       <nav className={styles.nav}>
-        <div className={styles.logoContainer}>
+        {/* Added Link to the logo to navigate home */}
+        <Link to="/" className={styles.logoContainer}>
           <img src={phadaLogo} alt="PhadaDB Logo" className={styles.logoImage} />
           <h1>Phada<b>DB</b></h1>
-        </div>
+        </Link>
 
         <motion.ul className={styles.navList}>
           {['Produto', 'Planos', 'Documentação', 'Contato'].map((item, i) => (
@@ -46,9 +48,11 @@ const Header = () => {
         </motion.ul>
 
         <div className={styles.actions}>
-          <motion.a href="#" className={styles.loginButton} whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-            Login
-          </motion.a>
+          <Link to="/login" className={styles.loginButton}>
+            <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+              Login
+            </motion.div>
+          </Link>
           <motion.button className={styles.downloadButton} whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
             Baixar Agora
           </motion.button>

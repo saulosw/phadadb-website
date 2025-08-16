@@ -1,0 +1,32 @@
+.authContainer {
+  display: flex;
+  min-height: 100vh;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 60px;
+}
+
+.formSide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 20px;
+}
+
+.sideImageContent {
+  min-height: 400px;
+  max-width: 950px;
+  display: flex;
+  align-items: center;
+}
+
+.sideImage {
+  width: 100%;
+  height: 99%;
+  object-fit: cover;
+  pointer-events: none;
+  -webkit-user-drag: none;
+  user-select: none;
+  -webkit-user-select: none;
+}

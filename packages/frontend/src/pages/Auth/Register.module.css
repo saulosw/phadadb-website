@@ -1,0 +1,174 @@
+.formWrapper {
+  width: 100%;
+  max-width: 550px;
+  background-color: var(--color-surface);
+  padding: 48px;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.title {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: var(--color-text-primary);
+}
+
+.subtitle {
+  text-align: center;
+  color: var(--color-text-secondary);
+  margin-bottom: 32px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.inputGroup {
+  display: flex;
+  flex-direction: column;
+}
+
+.inputGroup label {
+  font-size: 0.9rem;
+  font-weight: 500;
+  margin-bottom: 8px;
+  color: var(--color-text-secondary);
+}
+
+.inputGroup input {
+  background-color: var(--color-background);
+  border: 1px solid #333;
+  border-radius: 8px;
+  padding: 12px 15px;
+  color: var(--color-text-primary);
+  font-size: 1rem;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease, transform 0.2s ease;
+}
+
+.inputGroup input:hover {
+  transform: translateY(-1px);
+  border-color: var(--color-primary-light);
+}
+
+.inputGroup input:focus {
+  outline: none;
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px rgba(138, 66, 245, 0.2);
+}
+
+.passwordWrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.passwordWrapper input {
+  width: 100%;
+  padding-right: 45px;
+}
+
+.eyeIcon {
+  position: absolute;
+  right: 15px;
+  cursor: pointer;
+  color: var(--color-text-secondary);
+  font-size: 1.2rem;
+}
+
+.forgotPassword {
+  align-self: flex-end;
+  font-size: 0.85rem;
+  color: var(--color-primary-light);
+  margin-top: 8px;
+  text-decoration: none;
+}
+
+.forgotPassword:hover {
+  text-decoration: underline;
+}
+
+.submitButton {
+  padding: 14px 20px;
+  border-radius: 8px;
+  border: none;
+  background-color: var(--color-primary);
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+  margin-top: 16px;
+}
+
+.submitButton:hover {
+  background-color: var(--color-primary-light);
+  box-shadow: 0 8px 20px rgba(138, 66, 245, 0.3);
+}
+
+.switchFormText {
+  margin-top: 32px;
+  text-align: center;
+  color: var(--color-text-secondary);
+}
+
+.switchLink {
+  color: var(--color-primary-light);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.switchLink:hover {
+  text-decoration: underline;
+}
+
+.requirements {
+  margin: -10px 0 10px 0;
+  overflow: hidden;
+}
+
+.requirementsList {
+  list-style: none;
+  padding: 10px;
+  font-size: 0.85rem;
+  color: var(--color-text-secondary);
+  background-color: var(--color-background);
+  border-radius: 8px;
+  border: 1px solid #333;
+}
+
+.requirementItem {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 6px;
+  transition: color 0.3s ease;
+}
+
+.requirementItem:last-child {
+  margin-bottom: 0;
+}
+
+.requirementItem .icon {
+  font-size: 1.1em;
+  transition: color 0.3s ease;
+}
+
+.requirementItem.met {
+  color: #4ade80;
+}
+
+.requirementItem:not(.met) {
+  color: #f87171;
+}
+
+.errorMessage {
+  color: #f87171;
+  text-align: center;
+  margin-top: 20px;
+  font-weight: 500;
+}
